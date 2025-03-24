@@ -50,23 +50,31 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open http://localhost:3000 in your browser.
 
 ## Project Structure
 
 ```
-├── components
-│   ├── Menubar.jsx
-│   ├── Dashboard.jsx
-│   └── Auth.jsx
-├── pages
-│   ├── index.js
-│   ├── dashboard.js
-│   └── api
-│       └── auth.js
-├── styles
-│   └── globals.css
-└── README.md
+├── public
+├── src
+│   ├── app
+│   │   ├── dashboard
+│   │   │   └── page.js
+│   │   ├── login
+│   │   │   └── page.js
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   ├── components
+│   │   ├── items
+│   │   │   ├── apifetch.js
+│   │   │   └── menubarlayout.js
+│   │   └── ui
+│   │       ├── button.jsx
+│   │       ├── input.jsx
+│   │       └── menubar.jsx
+│   └── lib
+│       └── utils.js
 ```
 
 ## Build and Deploy
