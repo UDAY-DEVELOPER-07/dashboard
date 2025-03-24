@@ -11,7 +11,7 @@ import {
 export default function Menu() {
     return (
         <>
-      <Menubar className="p-2 bg-gray-100 rounded-lg shadow-md">
+      <Menubar className="p-2 bg-gray-100 mt-4 flex align-middle items-center justify-center rounded-lg shadow-md">
       {/* Home Menu */}
       <MenubarMenu>
         <MenubarTrigger>Home</MenubarTrigger>

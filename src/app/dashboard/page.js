@@ -52,12 +52,12 @@ export default function Dashboard({ error }) {
   if (error) return <div className="text-red-500">{error}</div>;
   return (
     <div>
-      <div className="flex flex-row bg-blue-700 align-top justify-between  h-16 space-y-4">
+      <div className="flex flex-row bg-blue-700 items-center justify-between  h-16 space-y-4">
         <div className="flex flex-row items-center justify-center m-1 w-48 h-9">
           <h1
             className="text-white text-3xl font-extrabold">Dashboard</h1>
         </div>
-        <Menu className=" flex align-items-center justify-center" />
+        <Menu className=" flex items-center justify-center mt-2 h-10" />
         <div className="flex flex-row items-center justify-center w-32 h-9">
           <Button
             onClick={handlelogout}
