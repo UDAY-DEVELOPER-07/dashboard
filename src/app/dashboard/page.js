@@ -2,12 +2,12 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menubar } from "@/components/ui/menubar";
 import { Apifetch } from "@/components/items/apifetch";
+import Menu from "@/components/items/menubar";
 
 
 
-export default function Dashboard ({error }) {
+export default function Dashboard({ error }) {
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState('');
   const [filteredPosts, setFilteredPosts] = useState([]);
@@ -52,23 +52,23 @@ export default function Dashboard ({error }) {
   if (error) return <div className="text-red-500">{error}</div>;
   return (
     <div>
-      <div className="flex flex-row bg-blue-700 align-top justify-between  h-10 space-y-4">
+      <div className="flex flex-row bg-blue-700 align-top justify-between  h-16 space-y-4">
+        <div className="flex flex-row items-center justify-center m-1 w-48 h-9">
+          <h1
+            className="text-white text-3xl font-extrabold">Dashboard</h1>
+        </div>
+        <Menu className=" flex align-items-center justify-center" />
         <div className="flex flex-row items-center justify-center w-32 h-9">
-        <h1
-          className="text-white font-extrabold">Dashboard</h1></div> 
-        <Menubar
-          className="bg-white shadow-lg w-24 h-9"
-        />
-      <div className="flex flex-row items-center justify-center w-32 h-9">
-        <Button
-          onClick={handlelogout}
-          className="w-20 h-7 bg-primary flex text-primary-foreground shadow-xs hover:bg-primary/90"
-        >Sign Out
-        </Button>
+          <Button
+            onClick={handlelogout}
+            className="w-20 h-7 bg-primary flex text-primary-foreground shadow-xs hover:bg-primary/90"
+          >Sign Out
+          </Button>
         </div>
       </div>
-       {/* Main Content */}
-       <div className="flex-1 p-5">
+
+      {/* Main Content */}
+      <div className="flex-1 p-5">
         {/* Search */}
         <input
           type="text"
